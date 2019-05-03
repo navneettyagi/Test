@@ -183,7 +183,7 @@ public class BaseClass
 		Utility.checkPageIsReady();
 		logger.info("Navigate to Computer recognize page");
 		
-		Assert.assertTrue(driver.findElement(LoginPage.MFLQuestions_lblLogin).getText().equalsIgnoreCase(userName));
+		//Assert.assertTrue(driver.findElement(LoginPage.MFLQuestions_lblLogin).getText().equalsIgnoreCase(userName));
 		logger.info("Computer recognize page Verified");
 		
 		driver.findElement(LoginPage.MFLQuestions_Answer1).sendKeys(question1);
