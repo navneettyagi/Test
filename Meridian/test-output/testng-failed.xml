@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test1(failed)">
+    <classes>
+      <class name="com.qa.test.LettersAndDocs">
+        <methods>
+          <include name="verifyXmlFile"/>
+          <include name="sendDocumentSupportRequest"/>
+        </methods>
+      </class> <!-- com.qa.test.LettersAndDocs -->
+      <class name="com.qa.test.Login">
+        <methods>
+          <include name="initialSetUp"/>
+          <include name="logintest"/>
+          <include name="extentReport"/>
+          <include name="launchAppTest"/>
+          <include name="checkStatus"/>
+        </methods>
+      </class> <!-- com.qa.test.Login -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

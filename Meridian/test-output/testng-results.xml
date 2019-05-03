@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="3" failed="1" total="4" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="1781" started-at="2019-05-02T09:28:08Z" finished-at="2019-05-02T09:28:10Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="1781" started-at="2019-05-02T09:28:08Z" finished-at="2019-05-02T09:28:10Z">
+      <class name="com.qa.test.LettersAndDocs">
+        <test-method status="SKIP" signature="extentReport(java.lang.reflect.Method)[pri:0, instance:com.qa.test.LettersAndDocs@27efef64]" name="extentReport" is-config="true" duration-ms="0" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReport -->
+        <test-method status="SKIP" signature="sendDocumentSupportRequest()[pri:7, instance:com.qa.test.LettersAndDocs@27efef64]" name="sendDocumentSupportRequest" duration-ms="1" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendDocumentSupportRequest -->
+        <test-method status="SKIP" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:com.qa.test.LettersAndDocs@27efef64]" name="checkStatus" is-config="true" duration-ms="0" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
+        <test-method status="SKIP" signature="extentReport(java.lang.reflect.Method)[pri:0, instance:com.qa.test.LettersAndDocs@27efef64]" name="extentReport" is-config="true" duration-ms="0" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReport -->
+        <test-method status="SKIP" signature="verifyXmlFile()[pri:8, instance:com.qa.test.LettersAndDocs@27efef64]" name="verifyXmlFile" duration-ms="2" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyXmlFile -->
+        <test-method status="SKIP" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:com.qa.test.LettersAndDocs@27efef64]" name="checkStatus" is-config="true" duration-ms="0" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
+      </class> <!-- com.qa.test.LettersAndDocs -->
+      <class name="com.qa.test.Login">
+        <test-method status="PASS" signature="initialSetUp()[pri:0, instance:com.qa.test.Login@59f99ea]" name="initialSetUp" is-config="true" duration-ms="147" started-at="2019-05-02T14:58:08Z" finished-at="2019-05-02T14:58:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialSetUp -->
+        <test-method status="PASS" signature="extentReport(java.lang.reflect.Method)[pri:0, instance:com.qa.test.Login@59f99ea]" name="extentReport" is-config="true" duration-ms="4" started-at="2019-05-02T14:58:08Z" finished-at="2019-05-02T14:58:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.test.Login.launchAppTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReport -->
+        <test-method status="FAIL" signature="launchAppTest()[pri:1, instance:com.qa.test.Login@59f99ea]" name="launchAppTest" duration-ms="1722" started-at="2019-05-02T14:58:08Z" finished-at="2019-05-02T14:58:10Z">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[session not created: Chrome version must be between 70 and 73
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 851 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'BHAVNAWKS093', ip: '192.168.0.52', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: Chrome version must be between 70 and 73
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 851 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'BHAVNAWKS093', ip: '192.168.0.52', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse$$Lambda$204/865059288.apply(Unknown Source)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.HandshakeResponse$$Lambda$201/1464191502.apply(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake$$Lambda$202/1850954068.apply(Unknown Source)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at com.qa.test.BaseClass.selectEnvironment(BaseClass.java:145)
+	at com.qa.test.BaseClass.launchApp(BaseClass.java:160)
+	at com.qa.test.Login.launchAppTest(Login.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchAppTest -->
+        <test-method status="FAIL" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:com.qa.test.Login@59f99ea]" name="checkStatus" is-config="true" duration-ms="0" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=launchAppTest status=FAILURE method=Login.launchAppTest()[pri:1, instance:com.qa.test.Login@59f99ea] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.qa.test.Utility.takeScreenShot(Utility.java:124)
+	at com.qa.test.BaseClass.checkStatus(BaseClass.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
+        <test-method status="SKIP" signature="extentReport(java.lang.reflect.Method)[pri:0, instance:com.qa.test.Login@59f99ea]" name="extentReport" is-config="true" duration-ms="0" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReport -->
+        <test-method status="SKIP" signature="logintest()[pri:3, instance:com.qa.test.Login@59f99ea]" name="logintest" duration-ms="3" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintest -->
+        <test-method status="SKIP" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:com.qa.test.Login@59f99ea]" name="checkStatus" is-config="true" duration-ms="0" started-at="2019-05-02T14:58:10Z" finished-at="2019-05-02T14:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
+      </class> <!-- com.qa.test.Login -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
+</testng-results>
