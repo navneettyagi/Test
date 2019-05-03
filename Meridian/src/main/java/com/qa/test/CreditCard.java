@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -18,6 +19,10 @@ import org.testng.annotations.Test;
 public class CreditCard extends BaseClass
 {
 	String App_Id = "2216";
+	String fname = "Mike";
+	String lname = "David";
+	WebElement element;
+	String DD_name;
 
 	@Test(priority=4)
 	public void launchCreditCard() throws InterruptedException
@@ -50,7 +55,7 @@ public class CreditCard extends BaseClass
 	@Test(priority=5, enabled=false)
 	public void fillNewUserCreditCard() throws InterruptedException
 	{
-		
+
 		//Personal Information
 		//Enter  SSN
 		driver.findElement(By.id("sa_SSN")).sendKeys("000000003");
@@ -63,7 +68,7 @@ public class CreditCard extends BaseClass
 		//Select Purpose Type
 		Select purposeDropdown = new Select(driver.findElement(By.id("RequestType_RequestType")));
 		Thread.sleep(2000);
-		
+
 		logger.info("Option is selected from Purpose dropdown");
 		purposeDropdown.selectByIndex(3);
 		Thread.sleep(2000);
@@ -72,7 +77,7 @@ public class CreditCard extends BaseClass
 		//Select Card Type
 		Select cardDropdown = new Select(driver.findElement(By.id("CardType_CardType")));
 		Thread.sleep(2000);
-		
+
 		cardDropdown.selectByVisibleText("CREDIT CARD");
 		logger.info("Option CREDIT CARD is selected from Card dropdown ");
 
@@ -100,7 +105,7 @@ public class CreditCard extends BaseClass
 		Utility.checkPageIsReady();
 
 		//Enter First Name
-		driver.findElement(By.id("sa_FName")).sendKeys("Alok");
+		driver.findElement(By.id("sa_FName")).sendKeys(fname);
 		logger.info("First name entered");
 
 		//Enter Middle Name
@@ -108,14 +113,14 @@ public class CreditCard extends BaseClass
 		logger.info("Middle name entered");
 
 		//Enter Last Name
-		driver.findElement(By.id("sa_LName")).sendKeys("Agarwal");
+		driver.findElement(By.id("sa_LName")).sendKeys(lname);
 		logger.info("Last name entered");
 
 		//Select Suffix
-		Select suffixDropdown = new Select(driver.findElement(By.id("sa_Suffix")));
+		/*Select suffixDropdown = new Select(driver.findElement(By.id("sa_Suffix")));
 		Thread.sleep(2000);
 		suffixDropdown.selectByVisibleText("II");
-		logger.info("Suffix selected");
+		logger.info("Suffix selected");*/
 
 		//Enter Home Phone
 		driver.findElement(By.id("sa_ForeignHomePhone_tbPhoneNumber")).clear();
@@ -324,8 +329,8 @@ public class CreditCard extends BaseClass
 	}
 
 
-	
-	
+
+
 	@Test(priority=6)
 	public void fillCreditCardForm() throws InterruptedException
 	{
@@ -336,12 +341,29 @@ public class CreditCard extends BaseClass
 		Utility.checkPageIsReady();
 
 		//Purpose type
-		
+
+		DD_name = driver.findElement(By.id("RequestType_blkRequestType_Title")).getText();
 		Select purposeDropdown = new Select(driver.findElement(By.id("RequestType_RequestType")));
-		Utility.checkDuplicateItem(purposeDropdown.getOptions());
+		Utility.checkDuplicateItem(purposeDropdown.getOptions(), DD_name);
 		purposeDropdown.selectByIndex(3);
 		Thread.sleep(5000L);
 		logger.info("Purpose Dropdown option selected");
+
+		//Enter First Name
+		element = driver.findElement(By.id("sa_FName"));
+		element.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END, Keys.DELETE), fname);
+		//driver.findElement(By.id("sa_FName")).sendKeys(fname);
+		logger.info("First name entered");
+
+		//Enter Middle Name
+		driver.findElement(By.id("sa_MName")).sendKeys("");
+		logger.info("Middle name entered");
+
+		//Enter Last Name
+		element = driver.findElement(By.id("sa_LName"));
+		element.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END, Keys.DELETE), lname);
+		//driver.findElement(By.id("sa_LName")).sendKeys(lname);
+		logger.info("Last name entered");
 
 		//How did you find
 		if(!driver.findElement(By.id("CQuest_rpt_ctl01_SingleCustomQuestion_chkAnswer_1")).isSelected())
@@ -358,7 +380,7 @@ public class CreditCard extends BaseClass
 		logger.info("Pull Credit and Save button clicked");
 
 
-		/*innerloop:for(int i=1; i<=3; i++)
+		innerloop:for(int i=1; i<=6; i++)
 		{
 			try {
 				Thread.sleep(5000);
@@ -374,17 +396,18 @@ public class CreditCard extends BaseClass
 				e.printStackTrace();
 			}
 
-		}*/
+		}
 
 		Thread.sleep(5000);
 		Utility.checkPageIsReady();
 
+		System.out.println("Before Assert");
 		Assert.assertTrue(driver.findElement(By.id("TAB_divReferredProducts")).isDisplayed());
-
+		System.out.println("After Assert");
 
 	}
 
-	
-	
+
+
 
 }

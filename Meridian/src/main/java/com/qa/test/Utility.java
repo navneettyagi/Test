@@ -105,7 +105,7 @@ public class Utility extends BaseClass
 			e.printStackTrace();
 		}
 
-		robot.delay(250);
+		robot.delay(500);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -113,7 +113,7 @@ public class Utility extends BaseClass
 		robot.keyRelease(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.delay(150);
+		robot.delay(250);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 
@@ -133,18 +133,15 @@ public class Utility extends BaseClass
 	}	
 
 
-	public static void checkDuplicateItem(List<WebElement> list)
+	public static void checkDuplicateItem(List<WebElement> list, String name)
 	{
 		boolean flag = false;
-		/*Select select = new Select(driver.findElement(By.xpath(path)));
-
-		List<WebElement> list = select.getOptions();*/
+		logger.info(name + " Contains:");
 
 		for(int i = 0; i<list.size(); i++)
 		{
-			System.out.println(list.get(i).getText());
+			logger.info(list.get(i).getText());
 		}
-
 
 		Set<String> listNames = new HashSet<String>(list.size());
 		for (WebElement w : list) {
@@ -154,11 +151,13 @@ public class Utility extends BaseClass
 		if(list.size() == listNames.size())
 		{
 			flag = true;
+			logger.info("No duplicate values in dropdown!!!");
 		}
 
 		Assert.assertTrue(flag);
 	}
 
+	
 	public static void ValidateXMLNode(String xmlpath, String tagname, String tagvalue) throws ParserConfigurationException, SAXException, IOException
 	{ 
 		boolean flag = false;
@@ -178,21 +177,6 @@ public class Utility extends BaseClass
 
 		//Get all employees
 		NodeList nList = document.getElementsByTagName(tagname);
-
-		/*for (int i = 0; i < nList.getLength(); i++)
-		{
-			Node node = nList.item(i);
-			if (node.getNodeType() == Node.ELEMENT_NODE)
-			{
-				//Print each employee's detail
-				Element eElement = (Element) node;
-				if(eElement.getElementsByTagName(tagname).item(0).getTextContent().equalsIgnoreCase(tagvalue))
-				{
-					flag=true;
-					break;
-				}
-			}
-		}*/
 
 		for (int temp = 0; temp < nList.getLength(); temp++)
 		{

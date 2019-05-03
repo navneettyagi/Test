@@ -19,7 +19,7 @@ public class Login extends BaseClass
 	}
 
 
-	@Test(priority=2, enabled=false)
+	@Test(priority=2)
 	public void invalidLoginTest() throws InterruptedException
 	{
 		driver.navigate().to("https://beta.loanspq.com/login.aspx?enc2=lqc_NUOh2_sZoFnhMuzKAiuDjxZG8O04St2Hlzvvbvs");
