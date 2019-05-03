@@ -5,7 +5,7 @@
 	<test verbose="2" name="Test1">
 		<classes>
 			<class name="com.qa.test.Login" />
-			<!-- <class name="com.qa.test.CreditCard" /> -->
+			<class name="com.qa.test.CreditCard" />
 			<class name="com.qa.test.LettersAndDocs" />
 
 		</classes>
