@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -176,14 +177,14 @@ public class BaseClass
 		Utility.checkPageIsReady();
 		driver.findElement(LoginPage.LoginMain_txtLogin).sendKeys(userName);
 		logger.info("User name entered");
-		
-		driver.findElement(LoginPage.LoginMain_btnLogin).click();
+		//driver.findElement(LoginPage.LoginMain_btnLogin).click();
+		driver.findElement(LoginPage.LoginMain_btnLogin).sendKeys(Keys.ENTER);
 		logger.info("Login button Clicked");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		Utility.checkPageIsReady();
 		logger.info("Navigate to Computer recognize page");
 		
-		//Assert.assertTrue(driver.findElement(LoginPage.MFLQuestions_lblLogin).getText().equalsIgnoreCase(userName));
+		Assert.assertTrue(driver.findElement(LoginPage.MFLQuestions_lblLogin).getText().equalsIgnoreCase(userName));
 		logger.info("Computer recognize page Verified");
 		
 		driver.findElement(LoginPage.MFLQuestions_Answer1).sendKeys(question1);
