@@ -164,7 +164,7 @@ public class BaseClass
 		logger.info("Window maximized");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Utility.checkPageIsReady();
-		Assert.assertEquals(driver.getTitle(), "LoansPQ & Xpress Accounts Login");
+		Assert.assertTrue(driver.findElement(By.xpath(".//img[contains(@src,'logo_frontpage.gif')]")).isDisplayed());
 		logger.info("Login page verified");
 		
 	}
