@@ -179,6 +179,7 @@ public class BaseClass
 		
 		driver.findElement(LoginPage.LoginMain_btnLogin).click();
 		logger.info("Login button Clicked");
+		Thread.sleep(2000);
 		Utility.checkPageIsReady();
 		logger.info("Navigate to Computer recognize page");
 		
