@@ -180,7 +180,7 @@ public class BaseClass
 		//driver.findElement(LoginPage.LoginMain_btnLogin).click();
 		driver.findElement(LoginPage.LoginMain_btnLogin).sendKeys(Keys.ENTER);
 		logger.info("Login button Clicked");
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		Utility.checkPageIsReady();
 		logger.info("Navigate to Computer recognize page");
 		
